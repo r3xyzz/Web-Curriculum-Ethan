@@ -1,0 +1,157 @@
+/* styles.css */
+body {
+    background-image: url('https://images.alphacoders.com/695/thumb-1920-69561.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-pic {
+    width: 200px;
+    margin: 20px;
+    border: 10px solid rgb(57, 58, 58);
+}
+
+.about {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 25px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.rotating-logo {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.rotating-logo:hover {
+    animation: flip 0.1s ease;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(100px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(100px) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(100px) rotateY(360deg);
+    }
+}
+
+.gray-box {
+    background-color: rgba(160, 159, 159, 0.8);
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.niveles-programacion {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.nivel {
+    margin-bottom: 20px;
+}
+
+.nivel p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.barra {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nivel-python {
+    width: 55%;
+    background-color: #4CAF50;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.nivel-java {
+    width: 63%;
+    background-color: #FFC107;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.nivel-html-css {
+    width: 75%;
+    background-color: #2196F3;
+    height: 100%;
+    border-radius: 10px;
+}
