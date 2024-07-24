@@ -1,157 +1,237 @@
-/* styles.css */
 body {
     background-image: url('https://images.alphacoders.com/695/thumb-1920-69561.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-.profile-pic {
-    width: 200px;
-    margin: 20px;
-    border: 10px solid rgb(57, 58, 58);
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.about {
-    max-width: 600px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.section {
+    padding: 6rem 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    padding: 0 1rem;
 }
 
-h1 {
-    font-size: 1.5em;
-    margin-top: 30px;
+.info-box {
+    background-color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad para hacerlo translúcido */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex; /* Asegura que el contenido interno se alinee */
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+}
+
+.info-img {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto;
+    display: block;
+    margin: 20px 0; /* Espaciado alrededor de la imagen */
+}
+
+.profile-pic {
+    width: 50px; /* Tamaño de la imagen de perfil */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centra la imagen */
+    border-radius: 50%;
+}
+
+.info-content {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+.info-box.active .info-content {
+    display: block;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
 h2 {
-    font-size: 1.2em;
-    margin: 25px;
+    font-size: 2rem;
+    margin-top: 1rem;
 }
 
-.logo {
-    width: 30px;
-    height: 30px;
-}
-
-form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.rotating-logo {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.3s ease;
-}
-
-.rotating-logo:hover {
-    animation: flip 0.1s ease;
-}
-
-@keyframes flip {
-    0% {
-        transform: perspective(100px) rotateY(0deg);
-    }
-    50% {
-        transform: perspective(100px) rotateY(180deg);
-    }
-    100% {
-        transform: perspective(100px) rotateY(360deg);
-    }
-}
-
-.gray-box {
-    background-color: rgba(160, 159, 159, 0.8);
-    padding: 20px;
+.text {
     text-align: center;
-    margin-top: 50px;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    padding: 1rem;
 }
 
-.niveles-programacion {
-    background-color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.nivel {
-    margin-bottom: 20px;
+ul li {
+    padding: 0.5rem 0;
 }
 
-.nivel p {
-    font-size: 1.2em;
-    margin-bottom: 5px;
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.barra {
-    background-color: #ddd;
+.skill {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    background: #ddd;
     height: 20px;
     border-radius: 10px;
-    width: 80%;
-    margin: 0 auto;
+    overflow: hidden;
 }
 
-.nivel-python {
+.skill-level {
+    height: 100%;
+}
+
+.python {
     width: 55%;
-    background-color: #4CAF50;
-    height: 100%;
-    border-radius: 10px;
+    background: #4CAF50;
 }
 
-.nivel-java {
+.java {
     width: 63%;
-    background-color: #FFC107;
-    height: 100%;
-    border-radius: 10px;
+    background: #FFC107;
 }
 
-.nivel-html-css {
+.html-css {
     width: 75%;
-    background-color: #2196F3;
-    height: 100%;
+    background: #2196F3;
+}
+
+.contact-info a {
+    display: block;
+    margin: 0.5rem 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #4CAF50;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Animaciones de codificación */
+.code-animation {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.line {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.variable {
+    color: #ffcc00;
+}
+
+.var-name {
+    color: #66ccff;
+}
+
+.string {
+    color: #ff6666;
+}
+
+.keyword {
+    color: #cc66ff;
+}
+
+.indent {
+    margin-left: 2rem;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #00ff00; }
 }
